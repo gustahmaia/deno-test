@@ -1,0 +1,11 @@
+FROM archlinux:latest
+
+RUN pacman -S git -y --noconfirm
+
+RUN pacman -S deno -y --noconfirm
+
+EXPOSE 8000
+
+WORKDIR /deno-test
+
+CMD ["tail", "-f", "/dev/null"]
